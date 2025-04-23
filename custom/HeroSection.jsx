@@ -10,7 +10,7 @@ import { CiWarning } from "react-icons/ci";
 
 function HeroSection() {
   return (
-    <>
+    <div>
       <div className="flex items-center gap-3 justify-center flex-row-reverse">
         <p className="text-center py-2 uppercase">
           this is a portfolio project
@@ -82,7 +82,7 @@ function HeroSection() {
           </motion.div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
