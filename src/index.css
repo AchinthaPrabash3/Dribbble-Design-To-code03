@@ -9,4 +9,5 @@ body {
 
 @theme {
   --font-lexend: "Lexend", sans-serif;
+  --breakpoint-xs: 30rem;
 }

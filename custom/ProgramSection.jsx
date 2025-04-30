@@ -70,26 +70,33 @@ function ProgramSection() {
         ref={containerRef}
       >
         {data.map(({ name, des, images }, i) => (
-          <div className=" min-w-full flex items-center gap-12" key={i}>
+          <div
+            className=" min-w-full flex lg:flex-row flex-col-reverse items-center gap-12"
+            key={i}
+          >
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
               viewport={{ once: false, amount: 0.5 }}
-              className="w-1/2 [&_h3]:text-7xl  px-5 py-12"
+              className="lg:w-1/2 [&_h3]:lg:text-7xl [&_h3]:text-5xl  px-5 py-12"
             >
               <motion.p
                 whileHover={{ scale: 1.05, rotate: 10 }}
-                className="capitalize mb-4 px-3 py-2 bg-sky-100 text-blue-400 w-fit rounded-full cursor-pointer"
+                className="capitalize mb-4 px-3 py-2 bg-sky-100 text-blue-400 w-fit rounded-full cursor-pointer mx-auto md:mx-0"
               >
                 program
               </motion.p>
-              <motion.div className="flex items-center gap-3">
+              <motion.div className="flex items-center justify-center md:justify-start gap-3">
                 <h3>Adventure to</h3>
-                <img src={Logo} className="size-10 mt-3" />
+                <img src={Logo} className="md:size-10 mt-3 size-5" />
               </motion.div>
-              <h3 className="text-blue-500 mt-3 font-semibold">{name}</h3>
-              <p className="mt-10 text-lg font-light">{des}</p>
-              <div className="mt-12">
+              <h3 className="text-blue-500 mt-3 font-semibold text-center md:text-left">
+                {name}
+              </h3>
+              <p className="mt-10 md:text-lg font-light text-center md:text-left">
+                {des}
+              </p>
+              <div className="mt-12 flex items-center justify-center md:justify-start">
                 <CustomBtn text="Go on a trip!" />
               </div>
             </motion.div>

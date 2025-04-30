@@ -10,11 +10,13 @@ function StatsComp({ text, des }) {
       className="bg-white h-[200px] rounded-4xl hover:bg-blue-500 transition-all duration-300 group p-5  *:select-none *:cursor-pointer flex-1"
     >
       <img src={Logo} className="size-6 ml-auto group-hover:stroke-white  " />
-      <h3 className=" group-hover:text-white text-6xl">{text}</h3>
-      <p
-        className="group-hover:text-white capitalize mt-2"
-        dangerouslySetInnerHTML={{ __html: des }}
-      ></p>
+      <div className="flex flex-col items-center justify-center md:items-start">
+        <h3 className=" group-hover:text-white md:text-6xl text-7xl">{text}</h3>
+        <p
+          className="group-hover:text-white capitalize mt-2 md:text-left text-center"
+          dangerouslySetInnerHTML={{ __html: des }}
+        ></p>
+      </div>
     </motion.div>
   );
 }

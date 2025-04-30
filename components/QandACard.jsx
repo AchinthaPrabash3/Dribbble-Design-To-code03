@@ -17,7 +17,7 @@ function QandACard({ id, title, des }) {
       ></motion.div>
       <div className="relative">
         <div
-          className=" p-5 h-24 text-4xl flex gap-3"
+          className=" p-5 h-24 md:text-4xl text-3xl flex gap-3"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="flex gap-4">
@@ -33,14 +33,14 @@ function QandACard({ id, title, des }) {
         </div>
         <motion.div
           animate={{
-            height: isOpen ? "100px" : 0,
+            height: isOpen ? "" : 0,
             display: isOpen ? "" : "none",
           }}
           className=""
         >
           <motion.p
             animate={{ opacity: isOpen ? 1 : 0 }}
-            className="p-4 text-xl"
+            className="p-4 md:text-xl "
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
             expedita quis ipsa commodi repellendus ratione! Deleniti quidem

@@ -54,16 +54,22 @@ function FeaturesSection() {
         viewport={{ once: true, amount: 0.1 }}
         className="flex-col flex [&_h1]:xl:text-7xl [&_h1]:lg:text-6xl [&_h1]:text-5xl  [&_h1]:font-medium items-center"
       >
-        <div className="flex items-center gap-3 [&_h1]:text-blue-500">
+        <div className="md:flex items-center gap-3 [&_h1]:text-blue-500 hidden">
           <h1>Elevate</h1>
           <img
             src="https://images.pexels.com/photos/4965885/pexels-photo-4965885.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt=""
-            className="w-[150px] h-20 object-cover rounded-full"
+            className="md:w-[150px] w-[100px] md:h-20 object-cover rounded-full"
           />
           <h1> your well-being.</h1>
         </div>
-        <h1>Go to the mountains!</h1>
+
+        <h1 className="text-center">
+          <span className="md:hidden visible text-blue-500">
+            Elevate your wellbeing.
+          </span>
+          Go to the mountains!
+        </h1>
       </motion.div>
       <motion.p
         whileInView={{
@@ -78,14 +84,14 @@ function FeaturesSection() {
         gourment culinary experiences, and serene mountaintop views.
       </motion.p>
       <motion.div
-        className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 mt-24"
+        className="grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 md:gap-5 gap-2 mt-24"
         variants={containerAnimations}
         initial="hidden"
         whileInView="visable"
         viewport={{ once: true, amount: 0.6 }}
       >
         {featureData.map((item, i) => (
-          <motion.div variants={childAnimations}>
+          <motion.div variants={childAnimations} className="p-2">
             <FeaturesCard {...item} />
           </motion.div>
         ))}

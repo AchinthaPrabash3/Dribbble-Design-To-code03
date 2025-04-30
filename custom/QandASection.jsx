@@ -33,7 +33,7 @@ function QandASection() {
       <p className="px-3 py-2 rounded-full bg-sky-100 text-blue-500 w-fit mb-5">
         FAQ
       </p>
-      <div className="flex justify-between items-center mb-10">
+      <div className="flex md:flex-row flex-col justify-between md:items-center mb-10 md:gap-0  gap-4">
         <div className="flex gap-4 items-center">
           <h2 className="text-6xl first-letter:uppercase">
             frequently asked{" "}

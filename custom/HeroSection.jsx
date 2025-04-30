@@ -26,26 +26,29 @@ function HeroSection() {
               animate={{ opacity: 1, x: 0 }}
               className="col-span-3  p-5 bg-white pb-12 rounded-3xl"
             >
-              <div className="flex items-center gap-5">
-                <h1 className="2xl:text-7xl xl:text-6xl text-6xl lg:text-8xl md:text-7xl  capitalize">
+              <div className="flex items-center md:gap-5 gap-3 justify-center md:justify-start">
+                <h1 className="2xl:text-7xl xl:text-6xl xs:text-6xl text-5xl lg:text-8xl md:text-7xl  capitalize">
                   adventure
                 </h1>
-                <img src={Logo} className=" size-14 self-end mb-3" />
+                <img
+                  src={Logo}
+                  className=" md:size-14 size-6 self-end md:mb-3 mb-2"
+                />
               </div>
-              <h1 className="2xl:text-7xl xl:text-6xl text-6xl lg:text-8xl md:text-7xl">
+              <h1 className="2xl:text-7xl xl:text-6xl xs:text-6xl text-5xl lg:text-8xl md:text-7xl text-center md:text-left">
                 of your lifetime
               </h1>
-              <p className="mt-9 mb-10 font-light text-xl">
+              <p className="mt-9 mb-10 font-light md:text-xl text-center md:text-left">
                 explore scenic trails to magnificent waterfalls, surrounded by
                 lush landscapes that invigorate your senses and forge
                 unforgettable memories in nature
               </p>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 md:flex-row flex-col">
                 <CustomBtn text="reserve a spot!" />
                 <motion.button
                   whileHover="hover"
                   variants={{ hover: { scale: 1.05 } }}
-                  className="border-2 border-black h-12 px-5 rounded-full relative overflow-hidden"
+                  className="border-2 border-black h-12 px-5 rounded-full relative overflow-hidden "
                 >
                   <motion.div
                     variants={{ hover: { width: "100%" } }}
@@ -72,7 +75,7 @@ function HeroSection() {
             className="bg-[url('https://cff2.earth.com/uploads/2023/06/02100547/Mountain-2.jpg')] xl:flex-1 xl:h-auto h-[400px] bg-cover rounded-3xl xl:mask-r-from-50% mask-b-from-50%  xl:mask-b-from-100% flex xl:items-end xl:justify-start items-start justify-center pt-4 gap-4 pl-4 pb-4"
           >
             <p className="bg-white px-3 py-1 rounded-full">next trip</p>
-            <p className="bg-slate-200/50 backdrop-blur-xl px-3 py-1 rounded-full">
+            <p className="bg-slate-200/50 backdrop-blur-xl px-3 py-1 rounded-full hidden md:visible">
               Jul 12-22, 2025
             </p>
             <img src={Logo} alt="" className="size-8" />

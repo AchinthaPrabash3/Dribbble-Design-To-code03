@@ -26,17 +26,16 @@ function FooterSection() {
         whileInView={{ opacity: 1, transition: { duration: 0.5 } }}
         initial={{ opacity: 0 }}
         viewport={{ once: true, amount: 0.4 }}
-        className="flex p-14 bg-sky-100 rounded-3xl gap-6"
+        className="flex lg:flex-row flex-col p-14 bg-sky-100 rounded-3xl gap-6"
       >
-        <div className="bg-white rounded-2xl p-9 w-[60%] flex-none h-fit">
-          <h1 className="flex text-4xl flex-wrap items-center gap-3 leading-6">
+        <div className="bg-white rounded-2xl p-9 lg:w-[60%] flex-none h-fit">
+          <h1 className="flex xl:text-4xl text-2xl flex-wrap items-center gap-3 leading-none">
             <span className="text-blue-500">
               Ignite your sense of adventure,
             </span>
             dive into transformative explorations!
-            <img src={Logo} className="size-8" alt="" />
           </h1>
-          <div className="flex justify-between mt-12">
+          <div className="flex justify-between mt-12 xl:items-center gap-5 xl:flex-row flex-col">
             <p className="font-light first-letter:uppercase text-lg text-wrap">
               <span className="font-normal ">
                 embark on a unforgatable adventures
@@ -47,13 +46,13 @@ function FooterSection() {
             <CustomBtn text="Reserve a spot!" />
           </div>
         </div>
-        <div className="flex grow  gap-12 pl-12">
-          <div className="bg-[url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover rounded-4xl w-[40%] "></div>
-          <div className="bg-[url('https://images.pexels.com/photos/925263/pexels-photo-925263.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover rounded-4xl w-[60%]"></div>
+        <div className="flex grow xl:flex-row flex-col xl:gap-12 xl:pl-12 gap-3 ">
+          <div className="bg-[url('https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover rounded-4xl xl:w-[40%] flex-1"></div>
+          <div className="bg-[url('https://images.pexels.com/photos/925263/pexels-photo-925263.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover bg-center rounded-4xl xl:w-[60%] flex-1"></div>
         </div>
       </motion.div>
       <footer className="mt-12 pb-12">
-        <div className="pb-8 flex justify-between items-center border-b mb-8">
+        <div className="pb-8 flex lg:flex-row flex-col justify-between items-center border-b mb-8">
           <a href="#home">
             <div className="flex gap-2 items-center">
               <img src={Logo} className="size-5" />

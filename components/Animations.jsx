@@ -21,7 +21,7 @@ function Animations() {
 
   return (
     <motion.div
-      className="grid grid-cols-subgrid col-span-3"
+      className="grid md:grid-cols-subgrid col-span-3 grid-cols-1 gap-4"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

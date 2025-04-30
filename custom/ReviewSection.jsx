@@ -62,7 +62,7 @@ function ReviewSection() {
             transition: { duration: 0.5 },
           }}
           viewport={{ once: true, amount: 0.7 }}
-          className="[&_h2]:xl:text-7xl [&_h2]:lg:text-6xl [&_h2]:text-5xl  flex flex-col items-center"
+          className="[&_h2]:xl:text-7xl [&_h2]:lg:text-6xl [&_h2]:text-5xl  md:flex flex-col items-center hidden"
         >
           <div className="flex items-center justify-center gap-4 [&_h2]:text-blue-600">
             <h2 className=" first-letter:capitalize">what our</h2>
@@ -82,6 +82,20 @@ function ReviewSection() {
             />
             <img className="mt-5 size-10 " src={Logo} alt="" />
           </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.5 },
+          }}
+          viewport={{ once: true, amount: 0.7 }}
+        >
+          <h2 className=" first-letter:capitalize text-center text-5xl font-bold md:hidden visible">
+            <span className="text-blue-600">what our customers feel</span> about
+            us
+          </h2>
         </motion.div>
         <motion.p
           whileInView={{ opacity: 1, y: 0 }}
